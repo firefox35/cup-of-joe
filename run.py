@@ -17,3 +17,4 @@ sales = SHEET.worksheet('sales')
 data = sales.get_all_values()
 
 print(data)
+print('Welcome to Cuppa Joe')
