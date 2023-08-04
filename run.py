@@ -18,25 +18,31 @@ waitdress = ['Becky', 'Tisha', 'Cathy', 'Sarah', 'Helen']
 print("Hi, My name is " + random.choice(waitdress) + ".\n")
 print("We have a large selection of drinks available from our menu.\n")
 
+coffee_items = {"Latte": {"Small": 2.50, "Meduim": 2.75, "Large": 3.00},
+                "Flat-White": {"Small": 2.50, "Meduim": 2.75, "Large": 3.00},
+                "Americano": {"Small": 2.50, "Meduim": 2.75, "Large": 3.00},
+                "Cappucino": {"Small": 2.50, "Meduim": 2.75, "Large": 3.00},
+                "Mocha": {"Small": 2.50, "Meduim": 2.75, "Large": 3.00}}
+extra_items = {"Soya Milk": .50, "Cream": .75, "Chocolate": 1.00,
+                "Oat Milk": .50}
+total = []
+plus = []
+
 
 def add_coffee():
-    global list
-    list = [['Latte'],
-            ['Flat White'],
-            ['Americano'],
-            ['Cappucino'],
-            ['Mocha']]
+    global product
+    product = [['Latte'], ['Flat White'], ['Americano'], ['Cappucino'], ['Mocha']]
     headers = ["Name"]
-    print(tabulate(list, headers, tablefmt="rounded_outline"))   
+    print(tabulate(product, headers, tablefmt="rounded_outline"))   
     while True:
-        list = input("\nWhat coffee would you like off the menu? \n")
+        product = input("\nWhat coffee would you like off the menu? \n")
         try:
-            list = int(list)
+            product = int(product)
             print("Error: Please pick from menu!")
             print()
         except ValueError:
             break
-
+    
 
 add_coffee()
 
@@ -44,7 +50,7 @@ add_coffee()
 def quantity():
     global quantity
     while True:
-        quantity = input(f"\nHow many would {list} you like? \n")
+        quantity = input(f"\nHow many would {product} you like? \n")
         try:
             quantity = int(quantity)
             break
@@ -62,15 +68,16 @@ def add_extra():
     headers = ["Extra"]
     print(tabulate(extra, headers, tablefmt="rounded_outline"))
     while True:
-        extra = input(f"\nWould you like anything extra with your {list}? \n")
+        extra = input(f"\nWould you like anything extra with your {product}? \n")
         try:
             extra = int(extra)
             print("Error: Please pick from menu!")
             print()
         except ValueError:
             break
+    plus.append(extra_items[extra])
+   
 
-    
 add_extra()
 
 
@@ -79,7 +86,6 @@ def add_size():
     size = [["Small"], ["Meduim"], ["Large"]]
     headers = ["Size"]
     print(tabulate(size, headers, tablefmt="rounded_outline"))
-    extra = input(f"\nWould you like anything extra with your {list}? \n")
     while True:
         size = input("\nWhat size would you like? \n")
         try:
@@ -88,52 +94,38 @@ def add_size():
             print()
         except ValueError:
             break
-    print(f"\nYou have ordered {quantity} {size} {list} with {extra}.")
+    print(f"\nYou have ordered {quantity} {size} {product} with {extra}.\n")
+    total.append(coffee_items[product][size])
 
 
 add_size()
 
 
 def cal_price():
-    total: 0
-    coffee = [
-        ["Latte", "Small", 2.5],
-        ["Latte", "Meduim", 3.5],
-        ["Latte", "Large", 3.75],
-        ["Flat White", "Small", 2.25],
-        ["Flat White", "Meduim", 2.5],
-        ["Flat White", "Large", 2.75],
-        ["Americano", "Small", 2.25],
-        ["Americano", "Meduim", 2.5],
-        ["Americano", "Large", 2.75],
-        ["Cappucino", "Small", 2.65],
-        ["Cappucino", "Meduim", 2.85],
-        ["Cappucino", "Large", 3.10],
-        ["Mocha", "Small", 2.5],
-        ["Mocha", "Meduim", 2.75],
-        ["Mocha", "Large", 3.00]
-    ]
-
-    addon = [
-        ["soya milk", 0.50],
-        ["cream", 0.75],
-        ["chocolate", 1.00],
-        ["oat milk", 0.50]
-    ]
-    if ((coffee  == list  and size == coffee) and (extra == addon)):
-        price = coffee[2] + addon[1]
-        total = quantity * price
-        print(f"Your bill comes to the total of {total}")
-    elif ((coffee == list and size == coffee) and (extra == "No")):
-        price = coffee[2] + addon[1]
-        total = quantity * price
-        print(f"Your bill comes to the total of {total}")
-    else:
-        print("Please order again")
+    cost = total * int(quantity)
+    price = plus * int(quantity)
+    total_price = price + cost
+    print(f"Your total cost of your purchase is €{sum(total_price)}\n")
 
 
 cal_price()
 
+def order_num():
+    
+    print(f"Your order number is {random.randint(1,10)}\n")
+
+
+order_num()
+
+def welcome():
+        input("Would you like to order again")
+        if order == yes:
+            get_order_item()              
+        else:
+            print(sum(total))
+
+
+welcome()
 
 def main():
     pass
