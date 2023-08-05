@@ -31,18 +31,18 @@ plus = []
 
 def add_coffee():
     global product
-    product = [['Latte'], ['Flat White'], ['Americano'], ['Cappucino'], ['Mocha']]
+    item = [['Latte'], ['Flat White'], ['Americano'], ['Cappucino'], ['Mocha']]
     headers = ["Name"]
-    print(tabulate(product, headers, tablefmt="rounded_outline"))   
+    print(tabulate(item, headers, tablefmt="rounded_outline"))   
     while True:
         product = input("\nWhat coffee would you like off the menu? \n")
         try:
-            product = int(product)
+            item = int(product)
             print("Error: Please pick from menu!")
             print()
         except ValueError:
             break
-    
+
 
 add_coffee()
 
