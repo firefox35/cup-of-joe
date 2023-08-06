@@ -19,7 +19,7 @@ print("Hi, My name is " + random.choice(waitdress) + ".\n")
 print("We have a large selection of drinks available from our menu.\n")
 
 coffee_items = {"Latte": {"Small": 2.50, "Meduim": 2.75, "Large": 3.00},
-                "Flat-White": {"Small": 2.50, "Meduim": 2.75, "Large": 3.00},
+                "Flat White": {"Small": 2.50, "Meduim": 2.75, "Large": 3.00},
                 "Americano": {"Small": 2.50, "Meduim": 2.75, "Large": 3.00},
                 "Cappucino": {"Small": 2.50, "Meduim": 2.75, "Large": 3.00},
                 "Mocha": {"Small": 2.50, "Meduim": 2.75, "Large": 3.00}}
@@ -31,19 +31,20 @@ plus = []
 
 def add_coffee():
     global product
-    item = [['Latte'], ['Flat White'], ['Americano'], ['Cappucino'], ['Mocha']]
-    headers = ["Name"]
-    print(tabulate(item, headers, tablefmt="rounded_outline"))   
     while True:
+        item = [['Latte'], ['Flat White'], ['Americano'], ['Cappucino'], ['Mocha']]
+        headers = ["Name"]
+        print(tabulate(item, headers, tablefmt="rounded_outline"))  
+
         product = input("\nWhat coffee would you like off the menu? \n")
-        try:
-            item = int(product)
-            print("Error: Please pick from menu!")
-            print()
-        except ValueError:
+    
+        if product in coffee_items:
             break
-
-
+        else:
+            print()
+            print("NOT A VALID OPTION!\n")
+        
+           
 add_coffee()
 
 
@@ -64,17 +65,20 @@ quantity()
 
 def add_extra():
     global extra
-    extra = [["soya milk"], ["cream"], ["chocolate"], ["oat milk"]]
+    extra = [["Soya milk"], ["Cream"], ["Chocolate"], ["Oat milk"]]
     headers = ["Extra"]
     print(tabulate(extra, headers, tablefmt="rounded_outline"))
     while True:
         extra = input(f"\nWould you like anything extra with your {product}? \n")
         try:
-            extra = int(extra)
+            if extra in extra_items:
+                break
+        except ValueError:
+            extra.lower()
+        else:  
             print("Error: Please pick from menu!")
             print()
-        except ValueError:
-            break
+            
     plus.append(extra_items[extra])
    
 
@@ -94,7 +98,7 @@ def add_size():
             print()
         except ValueError:
             break
-    print(f"\nYou have ordered {quantity} {size} {product} with {extra}.\n")
+    print(f"\nYou have ordered:\n{quantity} - {size} {product} with {extra}.\n")
     total.append(coffee_items[product][size])
 
 
@@ -105,7 +109,7 @@ def cal_price():
     cost = total * int(quantity)
     price = plus * int(quantity)
     total_price = price + cost
-    print(f"Your total cost of your purchase is €{sum(total_price)}\n")
+    print(f"The total price is:\n €{sum(total_price)}\n")
 
 
 cal_price()
