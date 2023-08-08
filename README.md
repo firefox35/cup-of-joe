@@ -4,7 +4,7 @@ Welcome to Cuppa Joe
 
 We provide wonderful aroma's and taste's of coffee's from the four corners of the world that taste heavenly. In the quest to bring coffee lovers wanting more from us each time and have an experience like nowhere else.
 
-This is the link to the live version of Cuppa Joe[Here] (https://cuppa-joe-0dbd4cd33d7f.herokuapp.com/)  
+This is the link to the live version of Cuppa Joe  [Here](https://cuppa-joe-0dbd4cd33d7f.herokuapp.com/)  
 
 
 ## How to Order
@@ -43,6 +43,33 @@ The system for ordering is very straight forward and easy to use
 
 
 # Data Model
+
+**UML - Use Case Diagram**
+
+Unified Modelling Language (UML) is used to give a visual breakdown of the process of the application.
+
+* A use case diagram give the interaction between the user and the application.
+
+![Use Case Diagram](assets/images/use-case.PNG)
+
+
+**Class Diagram**
+
+![Class Diagram](assets/images/class-diagram.PNG)
+
+**Flow Control Diagram**
+
+![Flowchart](assets/images/flow-chart.PNG)
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -108,34 +135,89 @@ Before deploying to Heroku pip3 freeze > requirements.txt was used to add pyfigl
 # Credits
 ## Reading Material
 
-Random Numbers
 
-* https://www.programiz.com/python-programming/examples/random-number
-* https://pythonspot.com/random-numbers/
+* Python Program to Generate a Random Number -- https://www.programiz.com/python-programming/examples/random-number
 
-Nested Dictionary
+* Python random number between 1 and 100 -- https://pythonspot.com/random-numbers/
 
-* https://www.geeksforgeeks.org/python-nested-dictionary/
-* https://www.geeksforgeeks.org/python-extract-values-of-particular-key-in-nested-values/
+* Python Nested Dictionary -- https://www.geeksforgeeks.org/python-nested-dictionary/
 
-Dictionary
+* Python – Extract values of Particular Key in Nested Values -- https://www.geeksforgeeks.org/python-extract-values-of-particular-key-in-nested-values/
 
-* https://www.freecodecamp.org/news/create-a-dictionary-in-python-python-dict-methods/
-* https://www.datacamp.com/tutorial/python-dictionary-comprehension
-* https://absentdata.com/python/how-to-create-a-dictionary-in-python-3-ways/
+* Create a Dictionary in Python – Python Dict Methods -- https://www.freecodecamp.org/news/create-a-dictionary-in-python-python-dict-methods/
 
-Errors
+* Python Dictionary Comprehension Tutorial -- https://www.datacamp.com/tutorial/python-dictionary-comprehension
 
-* https://typing.readthedocs.io/en/latest/source/unreachable.html
-* https://stackoverflow.com/questions/57641186/simple-but-too-many-positional-arguments-for-method-call
-* https://stackoverflow.com/questions/56791883/typeerror-can-only-concatenate-str-not-set-to-str
-* https://itslinuxfoss.com/type-error-list-indices-must-integers-slices-tuple/#:~:text=The%20%E2%80%9Clist%20indices%20must%20be,list%20items%20causes%20a%20TypeError
+* How to Create a Dictionary in Python ( 3 Ways ) -- https://absentdata.com/python/how-to-create-a-dictionary-in-python-3-ways/
 
-Try Except
+* Unreachable Code and Exhaustiveness Checking -- https://typing.readthedocs.io/en/latest/source/unreachable.html
 
-* https://www.geeksforgeeks.org/python-try-except/
+* Simple but too many positional arguments for method call -- https://stackoverflow.com/questions/57641186/simple-but-too-many-positional-arguments-for-method-call 
+
+* TypeError: can only concatenate str (not "set") to str -- https://stackoverflow.com/questions/56791883/typeerror-can-only-concatenate-str-not-set-to-str --
+
+* TypeError: list indices must be integers or slices, not tuple -- https://itslinuxfoss.com/type-error-list-indices-must-integers-slices-tuple/#:~:text=The%20%E2%80%9Clist%20indices%20must%20be,list%20items%20causes%20a%20TypeError
+
+* Python Try Except -- https://www.geeksforgeeks.org/python-try-except/
+
+* Using a Function in Another Function | Python Tutorial for Beginners --
+https://www.google.com/search?rlz=1C1CHBF_enIE1013IE1013&sxsrf=AB5stBhVhkBGF-Y0cC6GMiBvrM9VMV-XbA:1691420085665&q=how+to+use+one+function+in+another+function+in+python&tbm=vid&source=lnms&sa=X&sqi=2&ved=2ahUKEwjlzvzq5sqAAxUFR8AKHUoACdIQ0pQJegQICRAB&biw=1360&bih=651&dpr=1#fpstate=ive&vld=cid:62e8633b,vid:5WSPeLEvZ9c
+
+* What is Python's Main Function Useful For? --
+https://www.google.com/search?rlz=1C1CHBF_enIE1013IE1013&sxsrf=AB5stBgT9rqvOWnP_OJ6l3KX5ncZ2uU5aA:1691399218675&q=how+to+use+a+main+function+in+python&tbm=vid&source=lnms&sa=X&ved=2ahUKEwjMz-iMmcqAAxVJVkEAHTowD0wQ0pQJegQIDBAB&biw=1360&bih=651&dpr=1#fpstate=ive&vld=cid:3c80e14c,vid:lVUOrPunRxQ
  
 ## Video Material
-- 
+
+- Python NameError: global name 'x' is not defined --
+https://www.youtube.com/watch?v=miXTxmIHh8g
+
+- Python: While Loop for Input Validation --
+https://www.youtube.com/watch?v=eF5mObNHeek
+
+- How to Validate User Inputs in Python | Input Validation in Python --
+https://www.youtube.com/watch?v=LUWyA3m_-r0
+
+- Python Programming: How to display the menu items and prices on the screen? --
+https://www.youtube.com/watch?v=hkmc0vYGpHc
+
+- How to Create a Menu in Python --
+https://www.youtube.com/watch?v=P6azEyNIQDQ
+
+- Python for beginners Coffee Shop program --
+https://www.youtube.com/watch?v=CZi2xCFuWGI
+
+- Make Menus In Python with While True Loop | Choose an Option in Python --
+https://www.youtube.com/watch?v=ZBx7oWCJ4aY
+
+- Funpy - Classic upper lower case problems in python --
+https://www.youtube.com/watch?v=O4sexLv0Ovc
+
+- 2020 How to Fix Your Path Variable in Python | Python Tutorial --
+https://www.youtube.com/watch?v=3J96_vyfx8Y
+
+- Introduction to Classes and Objects - Part 1 (Data Structures & Algorithms #3) --
+https://www.youtube.com/watch?v=8yjkWGRlUmY
+
+- TypeError: Missing 1 required positional argument: 'self' --
+https://www.youtube.com/watch?v=uoLYZ2NzaSI
+
+- KeyError Pandas: How to fix --
+https://www.youtube.com/watch?v=6bQVZED9jwM
+
+- Python program to Create class STORE to keep track of Products --
+https://www.youtube.com/watch?v=WU2k1rzKZHU
+
+- User Input and Exception Handling in Python --
+https://www.youtube.com/watch?v=FH75gUctFvY
+
+- Read and Write data from google sheets using python --
+https://www.youtube.com/watch?v=hyUw-koO2DA
+
+- How to Use Global Variables Inside a Python Function? --
+https://www.youtube.com/watch?v=v2oLM6tDj04
+
+
+
+
 
 

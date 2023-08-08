@@ -23,29 +23,25 @@ coffee_items = {"Latte": {"Small": 2.50, "Meduim": 2.75, "Large": 3.00},
                 "Americano": {"Small": 2.50, "Meduim": 2.75, "Large": 3.00},
                 "Cappucino": {"Small": 2.50, "Meduim": 2.75, "Large": 3.00},
                 "Mocha": {"Small": 2.50, "Meduim": 2.75, "Large": 3.00}}
-extra_items = {"Soya Milk": .50, "Cream": .75, "Chocolate": 1.00,
-                "Oat Milk": .50}
+extra_items = {"Soya Milk": .50, "Cream": .75,
+               "Chocolate": 1.00, "Oat Milk": .50}
 total = []
 plus = []
-
+ 
 
 def add_coffee():
     global product
     while True:
-        item = [['Latte'], ['Flat White'], ['Americano'], ['Cappucino'], ['Mocha']]
+        item = [['Latte'], ['Flat White'], ['Americano'],
+                ['Cappucino'], ['Mocha']]
         headers = ["Name"]
-        print(tabulate(item, headers, tablefmt="rounded_outline"))  
-
-        product = input("\nWhat coffee would you like off the menu? \n")
-    
+        print(tabulate(item, headers, tablefmt="rounded_outline"))
+        product = input("\nWhat coffee would you like? \n")
         if product in coffee_items:
             break
         else:
             print()
             print("NOT A VALID OPTION!\n")
-        
-           
-add_coffee()
 
 
 def quantity():
@@ -60,9 +56,6 @@ def quantity():
             print()
 
 
-quantity()
-
-
 def add_extra():
     global extra
     extra = [["Soya milk"], ["Cream"], ["Chocolate"], ["Oat milk"]]
@@ -75,14 +68,10 @@ def add_extra():
                 break
         except ValueError:
             extra.lower()
-        else:  
+        else:
             print("Error: Please pick from menu!")
             print()
-            
     plus.append(extra_items[extra])
-   
-
-add_extra()
 
 
 def add_size():
@@ -98,11 +87,8 @@ def add_size():
             print()
         except ValueError:
             break
-    print(f"\nYou have ordered:\n{quantity} - {size} {product} with {extra}.\n")
+    print(f"\nYou have ordered:\n {quantity} - {size} {product} with {extra}.\n")
     total.append(coffee_items[product][size])
-
-
-add_size()
 
 
 def cal_price():
@@ -112,27 +98,51 @@ def cal_price():
     print(f"The total price is:\n €{sum(total_price)}\n")
 
 
-cal_price()
-
 def order_num():
-    
-    print(f"Your order number is {random.randint(1,10)}\n")
+    print(f"Order number is {random.randint(1,500)}\n")
 
 
-order_num()
-
-def welcome():
-        input("Would you like to order again")
-        if order == yes:
-            get_order_item()              
+def options():
+    menu = [[0, "Add to Order"], [1, "Cancel Order"], [2, "Pay Order"], [3, "Exit"]]
+    headers = ["Code", "Options"]
+    print(tabulate(menu, headers, tablefmt="rounded_outline"))
+    while True:
+        option = int(input("Please enter code: \n"))
+        if option in menu[0]:
+            return update_order()
+        elif option in menu[1]:
+            break
+        elif option in menu[2]:
+            print("Under Construction")
+        elif option in menu[3]:
+            break
         else:
-            print(sum(total))
+            print("Invalid Entry")
 
+def update_order():
+    coffee = add_coffee()
+    coffee.update()
+    amount = int(quantity())
+    amount.update()
+    plus = add_extra()
+    plus.update()
+    size = add_size()
+    size.update()
+    
 
-welcome()
+def pay():
+    print("Under Construction")
+
 
 def main():
-    pass
-
+    add_coffee()
+    quantity()
+    add_extra()
+    add_size()
+    cal_price()
+    order_num()
+    options()
+    update_order()
+    pay()
 
 main()
