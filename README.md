@@ -25,7 +25,7 @@ The system for ordering is very straight forward and easy to use
 * The waitress displays a bill for your order.
 * The user will paid the bill.
 * The waitress displays the user with an order number.
-- 
+
 
 # Features
 
@@ -37,8 +37,8 @@ The system for ordering is very straight forward and easy to use
 2. 
 
 ## Future Features
-- 
-- 
+- Its linked to google sheet - Cuppa Joe but the plan is to expand and store information about stock, sales etc. - [Cuppa Joe Google Sheet](https://docs.google.com/spreadsheets/d/1LndCzbR5Ka51pPy-31jOA-pqE0OtMWGdWG6E3wUtcwM/edit#gid=1040659719)
+- Upgrade User interface with background image
 - 
 
 
@@ -103,15 +103,17 @@ PEP8
 
 # Deployment
 
+The project used CodeAnywhere is its code editor to develop the Cuppa Joe Application [CodeAnyWhere](https://firefox35-cuppa-joe-awilov8vp9.us2.codeanyapp.com/#/workspaces/cuppa-joe)
+
 The site was deployed via [Heroku]( https://id.heroku.com/login), and the live link can be found here: [Cuppa Joe](https://cuppa-joe-0dbd4cd33d7f.herokuapp.com/)  
 
 This project was developed utilising the [Code Institute Template]( https://github.com/Code-Institute-Org/python-essentials-template).  Some of the deployment steps below are specifically required for the new CI template and may not be applicable to older versions, or different projects.
 
-Before deploying to Heroku pip3 freeze > requirements.txt was used to add pyfiglet and Colorama imports for deployment.
+Before deploying to Heroku pip3 freeze > requirements.txt was used to add Tubulate and Gspread imports for deployment.
 
 1.	Log in to [Heroku]( https://id.heroku.com/login) or create an account if required.
 2.	Then, click the button labelled **New** from the dashboard in the top right corner and from the drop-down menu select **Create New App**.
-3.	You must enter a unique app name, (I used mastermind-code-breaker).
+3.	You must enter a unique app name.
 4.	Next, select your region, (I chose Europe as I am in Ireland).
 5.	Click on the **Create App** button.
 6.	The next page you will see is the project’s Deploy Tab.  Click on the **Settings Tab** and scroll down to **Config Vars**.
@@ -130,7 +132,9 @@ Before deploying to Heroku pip3 freeze > requirements.txt was used to add pyfigl
 * Select the correct branch for deployment from the drop-down menu and click **Deploy Branch** for manual deployment.
 
 ### Version Control
-* Github was used as the version control software to store the project code. The Git Commands used were git add . , git commmit and git push to send it to the Github Cuppa Joe Repository.
+* Github was used as the version control software to store the project code. 
+* The Git Commands used were git add . , git commit -m and git push to send it to the Github Repository -
+  [Cuppa Joe Repo](https://github.com/firefox35/cuppa-joe)
 
 # Credits
 ## Reading Material
