@@ -13,9 +13,41 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('cuppa_joe')
 
+BANNER="""
+
+
+░█████╗░██╗░░░██╗██████╗░██████╗░░█████╗░  ░░░░░██╗░█████╗░███████╗
+██╔══██╗██║░░░██║██╔══██╗██╔══██╗██╔══██╗  ░░░░░██║██╔══██╗██╔════╝
+██║░░╚═╝██║░░░██║██████╔╝██████╔╝███████║  ░░░░░██║██║░░██║█████╗░░
+██║░░██╗██║░░░██║██╔═══╝░██╔═══╝░██╔══██║  ██╗░░██║██║░░██║██╔══╝░░
+╚█████╔╝╚██████╔╝██║░░░░░██║░░░░░██║░░██║  ╚█████╔╝╚█████╔╝███████╗
+░╚════╝░░╚═════╝░╚═╝░░░░░╚═╝░░░░░╚═╝░░╚═╝  ░╚════╝░░╚════╝░╚══════╝
+
+"""
+COFFEE = """
+
+(  )   (   )  )
+     ) (   )  (  (
+     ( )  (    ) )
+     _____________
+    <_____________> ___
+    |             |/ _ \
+    |               | | |
+    |               |_| |
+ ___|             |\___/
+/    \___________/    \
+\_____________________/
+
+"""
+
+
+
+
+print(BANNER)
+print(COFFEE)
 print("****Welcome to Cuppa Joe****\n")
-waitdress = ['Becky', 'Tisha', 'Cathy', 'Sarah', 'Helen']
-print("Hi, My name is " + random.choice(waitdress) + ".\n")
+waitress = ['Becky', 'Tisha', 'Cathy', 'Sarah', 'Helen']
+print("Hi, My name is " + random.choice(waitress) + ".\n")
 print("We have a large selection of drinks available from our menu.\n")
 
 coffee_items = {"Latte": {"Small": 2.50, "Medium": 2.75, "Large": 3.00},
@@ -111,8 +143,8 @@ def get_order_items():
 # Main Function that calls all functions
 def main():
     while True:
-        more = input("Do you want to add to the order?\n")
-        if more == "yes":
+        more = input("Do you want to add to the order? Y/N \n")
+        if more == "Y":
             get_order_items()
         else:
             break
