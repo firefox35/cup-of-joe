@@ -28,8 +28,8 @@ extra_items = {"Soya Milk": .50, "Cream": .75,
 total = []
 order_items = []
 
- 
-#Add Coffee to the Order
+
+# Add Coffee to the Order
 def add_coffee():
     global product
     while True:
@@ -44,6 +44,7 @@ def add_coffee():
             print()
             print("Please Select from Menu!\n")
 
+
 # Add Quantity to the Order
 def get_quantity():
     global quantity
@@ -55,6 +56,7 @@ def get_quantity():
         except ValueError:
             print("Error: Please enter a number!")
             print()
+
 
 # Add Something extra to the Coffee Order
 def add_extra():
@@ -71,6 +73,7 @@ def add_extra():
             print("Error: Please pick from menu!")
             print()
     total.append(extra_items[extra] * quantity)
+
 
 # Add Size of Coffee to the Order
 def add_size():
@@ -89,9 +92,11 @@ def add_size():
     print(f"\nYou have ordered:\n {quantity} - {size} {product} with {extra}.\n")
     total.append(coffee_items[product][size] * quantity)
 
+
 # Order Number Generated
 def order_num():
     print(f"Order number is {random.randint(1,500)}\n")
+
 
 # Display items and input order
 def get_order_items():
@@ -102,16 +107,16 @@ def get_order_items():
 
     order_items.append(f"Quantity: {quantity}\nSize: {size}\nProduct: {product}\nExtra: {extra}\n")
 
+
 # Main Function that calls all functions
 def main():
     while True:
         more = input("Do you want to add to the order?\n")
         if more == "yes":
-            get_order_items() 
-            order_num()  
+            get_order_items()
         else:
             break
-    
+
     print("\nYou order:\n")
     for order in order_items:
         print(order)

@@ -2,7 +2,7 @@
 
 Welcome to Cuppa Joe
 
-We provide wonderful aroma's and taste's of coffee's from the four corners of the world that taste heavenly. In the quest to bring coffee lovers wanting more from us each time and have an experience like nowhere else.
+We provide wonderful aroma's and taste's of coffee's from all over the four corners of the world, that taste heavenly. In the quest to bring coffee lovers wanting more each time they visit us and having an experience like nowhere else.
 
 This is the link to the live version of Cuppa Joe  [Here](https://cuppa-joe-0dbd4cd33d7f.herokuapp.com/)  
 
@@ -23,24 +23,21 @@ The system for ordering is very straight forward and easy to use
 * The waitress will ask what size of coffee.
 * The user inputs their choice from the menu.
 * The waitress confirms your order.
-* The waitress displays a bill for your order.
-* The user will paid the bill.
+* The waitress displays your order.
 * The waitress displays the user with an order number.
+* The waitress displays the user with a price of the order.
 
 
 # Features
 
 ## Existing Features
-
-
-
 1. 
 2. 
 
 ## Future Features
 - Its linked to google sheet - Cuppa Joe but the plan is to expand and store information about stock, sales etc. - [Cuppa Joe Google Sheet](https://docs.google.com/spreadsheets/d/1LndCzbR5Ka51pPy-31jOA-pqE0OtMWGdWG6E3wUtcwM/edit#gid=1040659719)
-- Upgrade User interface with background image
-- 
+- Upgrade UI with background image
+- Add Payment Section
 
 
 # Data Model
@@ -50,31 +47,26 @@ The system for ordering is very straight forward and easy to use
 Unified Modelling Language (UML) is used to give a visual breakdown of the process of the application.
 
 * A use case diagram give the interaction between the user and the application.
+* The system is represented by the box in the diagram. The figures outside the system represents the user interacting with the system.
+* The circle present the actions within the system.
+* The lines are the communication between the user and the system.
 
 ![Use Case Diagram](assets/images/use-case.PNG)
 
 
+
 **Class Diagram**
+
+The class diagram allow you to plan the development of the project on what methods need to be implemented to arrive with a working application. It allows your code to be structured in a set of instructions that the application can follow and apply by you the developer and operating system. 
+We have created a class called Coffee Shop shown in the diagram below which the developer to implement each function as set of instruction to be carried out. This is called Object Oriented programming that allow the developer to map out the methods to be used to develop the project.
 
 ![Class Diagram](assets/images/class-diagram.PNG)
 
 **Flow Control Diagram**
 
+The flow control is a design in how a transaction follows a certain path with clear instructions called statements and functions to call and execute to reach a desired outcome by using statements like if elif else statements to whether the path you choose to reach the outcome of the user.This allows the user to validation the outcome in its coding of the application. 
+
 ![Flowchart](assets/images/flow-chart.PNG)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # Testing
 
@@ -97,9 +89,9 @@ Unified Modelling Language (UML) is used to give a visual breakdown of the proce
 
 ## Validator Testing
 PEP8
-- 
-- 
-- 
+- [PEP8 online](https://pep8ci.herokuapp.com/) is used to validate the python file and to check if there is any errors that need to be fixed.
+
+
 
 
 # Deployment
