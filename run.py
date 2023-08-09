@@ -29,7 +29,7 @@ total = []
 order_items = []
 
  
-
+#Add Coffee to the Order
 def add_coffee():
     global product
     while True:
@@ -42,9 +42,9 @@ def add_coffee():
             break
         else:
             print()
-            print("NOT A VALID OPTION!\n")
+            print("Please Select from Menu!\n")
 
-
+# Add Quantity to the Order
 def get_quantity():
     global quantity
     while True:
@@ -56,11 +56,10 @@ def get_quantity():
             print("Error: Please enter a number!")
             print()
 
-
+# Add Something extra to the Coffee Order
 def add_extra():
     global extra
-    global quantity
-    extra = [["Soya milk"], ["Cream"], ["Chocolate"], ["Oat milk"]]
+    extra = [["Soya Milk"], ["Cream"], ["Chocolate"], ["Oat Milk"]]
     headers = ["Extra"]
     print(tabulate(extra, headers, tablefmt="rounded_outline"))
     while True:
@@ -73,10 +72,9 @@ def add_extra():
             print()
     total.append(extra_items[extra] * quantity)
 
-
+# Add Size of Coffee to the Order
 def add_size():
     global size
-    global quantity
     size = [["Small"], ["Meduim"], ["Large"]]
     headers = ["Size"]
     print(tabulate(size, headers, tablefmt="rounded_outline"))
@@ -91,58 +89,36 @@ def add_size():
     print(f"\nYou have ordered:\n {quantity} - {size} {product} with {extra}.\n")
     total.append(coffee_items[product][size] * quantity)
 
+# Order Number Generated
 def order_num():
     print(f"Order number is {random.randint(1,500)}\n")
 
-
-def options():
-    menu = [[0, "Add to Order"], [1, "Cancel Order"], [2, "Pay Order"], [3, "Exit"]]
-    headers = ["Code", "Options"]
-    print(tabulate(menu, headers,tablefmt="rounded_outline"))
-    while True:
-        option = int(input("Please enter code: \n"))
-        if option in menu[0]:
-            return get_order_items()
-        elif option in menu[1]:
-            break
-        elif option in menu[2]:
-            print("Under Construction")
-        elif option in menu[3]:
-            break
-        else:
-            print("Invalid Entry")    
-
-def pay():
-    print("Under Construction")
-
+# Display items and input order
 def get_order_items():
     add_coffee()
     get_quantity()
     add_extra()
     add_size()
 
-    global quantity
-    global size
-    global extra
-    global product
+    order_items.append(f"Quantity: {quantity}\nSize: {size}\nProduct: {product}\nExtra: {extra}\n")
 
-    order_items.append(f"Quantity: {quantity}\nSize: {size}\nProduct: {product}\nExtra: {extra}\nand\n")
-
+# Main Function that calls all functions
 def main():
     while True:
         more = input("Do you want to add to the order?\n")
         if more == "yes":
-            get_order_items()   
+            get_order_items() 
+            order_num()  
         else:
             break
     
-    print(f"The total price is:\n €{sum(total)}\n")
-
-    print("You order:\n")
+    print("\nYou order:\n")
     for order in order_items:
         print(order)
 
     order_num()
-    
+
+    print(f"The total price is:\n €{sum(total)}\n")
+
 
 main()

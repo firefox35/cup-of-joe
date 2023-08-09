@@ -6,6 +6,7 @@ We provide wonderful aroma's and taste's of coffee's from the four corners of th
 
 This is the link to the live version of Cuppa Joe  [Here](https://cuppa-joe-0dbd4cd33d7f.herokuapp.com/)  
 
+![Mockups](assets/images/cuppa-joe-devices.png)
 
 ## How to Order
 The system for ordering is very straight forward and easy to use
