@@ -29,18 +29,10 @@ The system for ordering is very straight forward and easy to use
 * The waitress displays the user with an order number.
 * The waitress displays the user with a price of the order.
 
-
-# Features
-
-## Existing Features
-1. First you 
-2. 
-
 ## Future Features
 - Its linked to google sheet - Cuppa Joe but the plan is to expand and store information about stock, sales etc. - [Cuppa Joe Google Sheet](https://docs.google.com/spreadsheets/d/1LndCzbR5Ka51pPy-31jOA-pqE0OtMWGdWG6E3wUtcwM/edit#gid=1040659719)
 - Upgrade UI with background image
 - Add Payment Section
-
 
 # Data Model
 
@@ -67,6 +59,8 @@ We have created a class called Coffee Shop shown in the diagram below which the 
 **Flow Control Diagram**
 
 The flow control is a design in how a transaction follows a certain path with clear instructions called statements and functions to call and execute to reach a desired outcome by using statements like if elif else statements to whether the path you choose to reach the outcome of the user.This allows the user to validation the outcome in its coding of the application. 
+
+![Flowchart](assets/images/flow-chart.PNG)
 
 # Libraries & Technology
 
@@ -280,7 +274,7 @@ Result:
 
  Failed - Loop won't break out 
 
-- Test 11
+Test 11
 
 Test Y on the - Do you want to add to the order?
 
@@ -298,7 +292,7 @@ Result:
 
   No errors and worked as expected.
 
-- Test 12
+Test 12
 
 Test N on the - Do you want to add to the order?
 
@@ -316,24 +310,13 @@ Result:
 
   No errors and worked as expected.
  
-
-
 ## Bugs
-### Solved Bugs
-- 
-- 
-- 
-
-## Remaining Bugs
-- 
-- 
-- 
-
+No bugs to report
 
 ## Validator Testing
 PEP8
 - [PEP8 online](https://pep8ci.herokuapp.com/) is used to validate the python file and to check if there is any errors that need to be fixed.
-
+![PEP8](assets/images/pep.png)
 
 
 
