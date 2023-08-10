@@ -127,10 +127,10 @@ def add_size():
     while True:
         size = input("\nWhat size would you like? \n").capitalize()
         if size in coffee_items:
-            break
-        else:
             print("ERROR: PLEASE ENTER OPTION AS SHOWN!")
-            print()              
+            print()
+        else:
+             break             
     print(f"\nYou have ordered:\n {quantity} - {size} {product} with {extra}.\n")
     total.append(coffee_items[product][size] * quantity)
 
