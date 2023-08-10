@@ -12,7 +12,6 @@ CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('cuppa_joe')
-
 BANNER="""
 
 
@@ -110,31 +109,28 @@ def add_extra():
     headers = ["Extra"]
     print(tabulate(extra, headers, tablefmt="rounded_outline"))
     while True:
-        extra = input(f"\nWould you like anything extra with your {product}? \n")
-        try:
-            extra = int(extra)
+        extra = input(f"\nWould you like anything extra with your {product}? \n").capitalize()
+        if extra in extra_items:
             break
-        except ValueError:
+        else:
             print("ERROR: PLEASE ENTER OPTION AS SHOWN!")
-            print()           
+            print()
     total.append(extra_items[extra] * quantity)
 
 
 # Add Size of Coffee to the Order
 def add_size():
     global size
+    amount = [["Small"], ["Meduim"], ["Large"]]
+    headers = ["Size"]
+    print(tabulate(amount, headers, tablefmt="rounded_outline"))
     while True:
-        amount = [["Small"], ["Meduim"], ["Large"]]
-        headers = ["Size"]
-        print(tabulate(amount, headers, tablefmt="rounded_outline"))
-        size = input("\nWhat size would you like? \n")
-        try:
-            size = int(size)
+        size = input("\nWhat size would you like? \n").capitalize()
+        if size in coffee_items:
             break
-        except ValueError:
+        else:
             print("ERROR: PLEASE ENTER OPTION AS SHOWN!")
-            print()           
-                         
+            print()              
     print(f"\nYou have ordered:\n {quantity} - {size} {product} with {extra}.\n")
     total.append(coffee_items[product][size] * quantity)
 
@@ -172,5 +168,6 @@ def main():
     print(f"The total price is:\n €{sum(total)}\n")
 
 SystemExit()
+
 
 main()

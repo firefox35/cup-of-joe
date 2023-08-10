@@ -33,7 +33,7 @@ The system for ordering is very straight forward and easy to use
 # Features
 
 ## Existing Features
-1. 
+1. First you 
 2. 
 
 ## Future Features
@@ -72,15 +72,250 @@ The flow control is a design in how a transaction follows a certain path with cl
 
 Built-in Python Libraries
 
-* random 
+* Random 
 
- This was used to generate the random order number in the receipt at the end of the process.
+    This was used to generate the random order number in the receipt at the end of the process.
+
+* Tabulate
+
+    This was used to create the display boxes for each from the menu items
+
+Other Technologies
+
+Resize Image
+* [Resize Pixel](https://www.resizepixel.com/download)
+
+ASCII Image
+
+* [Ffsymbols](https://fsymbols.com/text-art/)
+* [textart4u](https://textart4u.blogspot.com/2012/03/tea-cup-text-art-ascii-art.html)
+
 
 # Testing
 
-- Step 1
-- 
-- 
+- Test 1
+
+Test Y on the - Do you want to add to the order?
+
+Steps to Test:
+
+  1. Enter Y
+  2. Click Submit
+  3. Display Menu List
+
+Expected:
+
+  Y to bring you to the Menu list
+
+Result:
+
+  No errors and worked as expected.
+
+- Test 2
+
+Test N on the - Do you want to add to the order?
+
+Steps to Test:
+
+  1. Enter N
+  2. Click Submit
+  3. Exit you
+
+Expected:
+
+  N to bring you to the exit
+
+Result:
+
+  No errors and worked as expected.
+  
+Test 3
+
+Enter your coffee choice
+
+Steps to Test:
+
+  1. Enter coffee from menu
+  2. Click submit.
+  3. Display quantity section
+  
+Expected:
+  Display quantity section
+  
+Result:
+  No errors and worked as expected.
+
+
+Test 4
+Enter your coffee choice wrongly
+
+Steps to Test:
+
+  1. Enter input
+  2. Click submit.
+  3. Display Error
+  4. Resubmit Correct input
+  5. Display quantity
+  
+Expected:
+  Display quantity section
+  
+Result:
+  No errors and worked as expected.
+
+Test 5
+
+ Enter quantity
+
+Steps to Test:
+
+  1. Display quantity.
+  2. Enter value
+  3. Click submit.
+  4. Display extra section
+   
+Expected:
+
+ Display extra section
+
+Result:
+
+  No errors and worked as expected.
+
+Test 6
+
+ Enter quantity wrongly
+
+Steps to Test:
+
+  1. Display quantity.
+  2. Enter value
+  3. Display Error
+  4. Resubmit Correct input
+  5. Display extra section
+   
+Expected:
+
+ Display extra section
+
+Result:
+
+  No errors and worked as expected.
+
+Test 7
+
+ Enter extra
+
+Steps to Test:
+
+  1. Display extra.
+  2. Enter value
+  3. Click submit.
+  4. Display size section
+   
+Expected:
+
+ Display size section
+
+Result:
+
+  No errors and worked as expected.
+
+Test 8
+
+ Enter extra wrongly
+
+Steps to Test:
+
+  1. Display extra.
+  2. Enter value
+  3. Display Error
+  4. Resubmit Correct input
+  5. Display size section
+   
+Expected:
+
+ Display extra section
+
+Result:
+
+  No errors and worked as expected.
+
+Test 9
+
+ Enter size
+
+Steps to Test:
+
+  1. Display size.
+  2. Enter value
+  3. Click submit.
+  4. Display exit or add order question
+   
+Expected:
+
+ Display exit or add order question
+
+Result:
+
+  No errors and worked as expected.
+
+Test 10
+
+ Enter size wrongly
+
+Steps to Test:
+
+  1. Display size.
+  2. Enter value
+  3. Display Error
+  4. Resubmit Correct input
+  5. Display extra section
+   
+Expected:
+
+Display exit or add order question
+
+Result:
+
+ Failed - Loop won't break out 
+
+- Test 11
+
+Test Y on the - Do you want to add to the order?
+
+Steps to Test:
+
+  1. Enter Y
+  2. Click Submit
+  3. Display menu list again
+
+Expected:
+
+  Y to bring you to the Menu list
+
+Result:
+
+  No errors and worked as expected.
+
+- Test 12
+
+Test N on the - Do you want to add to the order?
+
+Steps to Test:
+
+  1. Enter N
+  2. Click Submit
+  3. Display your order
+
+Expected:
+
+ Display your order
+
+Result:
+
+  No errors and worked as expected.
+ 
 
 
 ## Bugs
