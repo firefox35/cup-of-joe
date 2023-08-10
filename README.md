@@ -11,6 +11,8 @@ This is the link to the live version of Cuppa Joe  [Here](https://cuppa-joe-0dbd
 ## How to Order
 The system for ordering is very straight forward and easy to use
 -
+![Flowchart](assets/images/flow-chart.PNG)
+
 * Firstly, you are greeted by one of our lovely staff members.
 * They will display the menu of our delicious coffee's.
 * The user will then be asked a number of questions regarding ordering.
@@ -66,11 +68,17 @@ We have created a class called Coffee Shop shown in the diagram below which the 
 
 The flow control is a design in how a transaction follows a certain path with clear instructions called statements and functions to call and execute to reach a desired outcome by using statements like if elif else statements to whether the path you choose to reach the outcome of the user.This allows the user to validation the outcome in its coding of the application. 
 
-![Flowchart](assets/images/flow-chart.PNG)
+# Libraries & Technology
+
+Built-in Python Libraries
+
+* random 
+
+ This was used to generate the random order number in the receipt at the end of the process.
 
 # Testing
 
-- 
+- Step 1
 - 
 - 
 

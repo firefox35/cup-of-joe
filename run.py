@@ -56,8 +56,6 @@ _______¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶
 """
 
 
-
-
 print(BANNER)
 print(COFFEE)
 print("****Welcome to Cuppa Joe****\n")
@@ -89,7 +87,7 @@ def add_coffee():
             break
         else:
             print()
-            print("Please Select from Menu!\n")
+            print("ERROR: PLEASE ENTER OPTION AS SHOWN!\n")
 
 
 # Add Quantity to the Order
@@ -101,7 +99,7 @@ def get_quantity():
             quantity = int(quantity)
             break
         except ValueError:
-            print("Error: Please enter a number!")
+            print("\nERROR: PLEASE ENTER A NUMBER!")
             print()
 
 
@@ -114,28 +112,29 @@ def add_extra():
     while True:
         extra = input(f"\nWould you like anything extra with your {product}? \n")
         try:
-            if extra in extra_items:
-                break
+            extra = int(extra)
+            break
         except ValueError:
-            print("Error: Please pick from menu!")
-            print()
+            print("ERROR: PLEASE ENTER OPTION AS SHOWN!")
+            print()           
     total.append(extra_items[extra] * quantity)
 
 
 # Add Size of Coffee to the Order
 def add_size():
     global size
-    size = [["Small"], ["Meduim"], ["Large"]]
-    headers = ["Size"]
-    print(tabulate(size, headers, tablefmt="rounded_outline"))
     while True:
+        amount = [["Small"], ["Meduim"], ["Large"]]
+        headers = ["Size"]
+        print(tabulate(amount, headers, tablefmt="rounded_outline"))
         size = input("\nWhat size would you like? \n")
         try:
             size = int(size)
-            print("Error: Please pick from menu!")
-            print()
-        except ValueError:
             break
+        except ValueError:
+            print("ERROR: PLEASE ENTER OPTION AS SHOWN!")
+            print()           
+                         
     print(f"\nYou have ordered:\n {quantity} - {size} {product} with {extra}.\n")
     total.append(coffee_items[product][size] * quantity)
 
@@ -172,5 +171,6 @@ def main():
 
     print(f"The total price is:\n €{sum(total)}\n")
 
+SystemExit()
 
 main()
