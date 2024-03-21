@@ -87,229 +87,117 @@ ASCII Image
 
 # Testing
 
-- Test 1
-
-Test Y on the - Do you want to add to the order?
-
-Steps to Test:
-
-  1. Enter Y
-  2. Click Submit
-  3. Display Menu List
-
-Expected:
-
-  Y to bring you to the Menu list
-
-Result:
-
-  No errors and worked as expected.
-
-- Test 2
-
-Test N on the - Do you want to add to the order?
-
-Steps to Test:
-
-  1. Enter N
-  2. Click Submit
-  3. Exit you
-
-Expected:
-
-  N to bring you to the exit
-
-Result:
-
-  No errors and worked as expected.
-  
-Test 3
-
-Enter your coffee choice
-
-Steps to Test:
-
-  1. Enter coffee from menu
-  2. Click submit.
-  3. Display quantity section
-  
-Expected:
-  Display quantity section
-  
-Result:
-  No errors and worked as expected.
+### Test 1
+|          Description            |         Steps          |Expected | Result  |
+|---------------------------------|------------------------|---------|---------|
+| Test Y on the -                 | 1. Enter Y.            | Passed  | &check; |
+| Do you want to add to the order?| 2. Click Submit.       | Passed  | &check; |
+|                                 | 3. Display Menu List.  | Passed  | &check; |
+|                                 | 4. Y Display Menu List.| Passed  | &check; |
 
 
-Test 4
-Enter your coffee choice wrongly
+### Test 2
+|          Description            |         Steps           |Expected | Result  |
+|---------------------------------|-------------------------|---------|---------|
+| Test N on the -                 | 1. Enter N.             | Passed  | &check; |
+| Do you want to add to the order?| 2. Click Submit.        | Passed  | &check; |
+|                                 | 3. Exit Program.        | Passed  | &check; |
 
-Steps to Test:
 
-  1. Enter input
-  2. Click submit.
-  3. Display Error
-  4. Resubmit Correct input
-  5. Display quantity
-  
-Expected:
-  Display quantity section
-  
-Result:
-  No errors and worked as expected.
+### Test 3
+|          Description        |         Steps               |Expected | Result  |
+|-----------------------------|-----------------------------|---------|---------|
+| Enter coffee choice         | 1. Enter coffee from menu.  | Passed  | &check; |
+|                             | 2. Click Submit.            | Passed  | &check; |
+|                             | 3. Display quantity section | Passed  | &check; |
 
-Test 5
 
- Enter quantity
+### Test 4
+|          Description        |         Steps               |Expected | Result  |
+|-----------------------------|-----------------------------|---------|---------|
+| Enter wrong coffee choice.  | 1. Enter input.             | Passed  | &check; |
+|                             | 2. Click Submit.            | Passed  | &check; |
+|                             | 3. Display Error.           | Passed  | &check; |
+|                             | 4. Resubmit correct input   | Passed  | &check; |
+|                             | 5. Display quantity section | Passed  | &check; |  
 
-Steps to Test:
 
-  1. Display quantity.
-  2. Enter value
-  3. Click submit.
-  4. Display extra section
+### Test 5
+|          Description        |         Steps               |Expected | Result  |
+|-----------------------------|-----------------------------|---------|---------|
+| Enter quantity              | 1. Display quantity         | Passed  | &check; |
+|                             | 2. Enter value.             | Passed  | &check; |
+|                             | 3. Click Submit.            | Passed  | &check; |
+|                             | 4. Display extra section    | Passed  | &check; |
+
+
+### Test 6
+|          Description        |         Steps               |Expected | Result  |
+|-----------------------------|-----------------------------|---------|---------|
+| Enter wrong quantity        | 1. Display quantity.        | Passed  | &check; |
+|                             | 2. Enter value.             | Passed  | &check; |
+|                             | 3. Display Error            | Passed  | &check; |
+|                             | 4. Resubmit Correct input   | Passed  | &check; |
+|                             | 5. Display extra section    | Passed  | &check; |
+
+
+### Test 7
+|          Description        |         Steps           |Expected | Result  |
+|-----------------------------|-------------------------|---------|---------|
+| Enter extra                 | 1. Display extra.       | Passed  | &check; |
+|                             | 2. Enter value.         | Passed  | &check; |
+|                             | 3. Click submit         | Passed  | &check; |
+|                             | 3. Display size section | Passed  | &check; |
+
+
+### Test 8
+|          Description        |         Steps               |Expected | Result  |
+|-----------------------------|-----------------------------|---------|---------|
+| Enter extra incorrectly     | 1. Display extra.           | Passed  | &check; |
+|                             | 2. Click Submit.            | Passed  | &check; |
+|                             | 3. Enter value              | Passed  | &check; |
+|                             | 4. esubmit Correct input    | Passed  | &check; |
+|                             | 5. Display size section     | Passed  | &check; |
+
+
+### Test 9
+|      Description        |                  Steps                |Expected | Result  |
+|-------------------------|---------------------------------------|---------|---------|
+| Enter size of coffee    | 1. Display size.                      | Passed  | &check; |
+|                         | 2. Enter value                        | Passed  | &check; |
+|                         | 3. Click submit.                      | Passed  | &check; |
+|                         | 4. Display exit or add order question | Passed  | &check; |
+
+
+### Test 10
+|          Description        |         Steps              |Expected | Result  |
+|-----------------------------|----------------------------|---------|---------|
+| Enter wrong size of coffee  | 1. Display size.           | Passed  | &check; |
+|                             | 2. Enter value             | Passed  | &check; |
+|                             | 3. Display Error           | Passed  | &check; |
+|                             | 4. Resubmit Correct input  | Passed  | &check; |
+|                             | 5. Display extra section   | Failed  | &check; |
+
    
-Expected:
+Expected: Display exit or add order question
+Result:  Failed - Loop won't break out 
 
- Display extra section
+### Test 11
+|             Description          |         Steps              |Expected | Result  |
+|----------------------------------|----------------------------|---------|---------|
+| Test Y on the -                  | 1. Enter Y.                | Passed  | &check; |
+| Do you want to add to the order? | 2. Click Submit            | Passed  | &check; |
+|                                  | 3. Display menu list again | Passed  | &check; |
 
-Result:
 
-  No errors and worked as expected.
+### Test 12
+|          Description             |         Steps              |Expected | Result  |
+|----------------------------------|----------------------------|---------|---------|
+| Test N on the -                  | 1. Enter N.                | Passed  | &check; |
+| Do you want to add to the order? | 2. Click Submit            | Passed  | &check; |
+|                                  | 3. Display your order      | Passed  | &check; |
 
-Test 6
 
- Enter quantity wrongly
-
-Steps to Test:
-
-  1. Display quantity.
-  2. Enter value
-  3. Display Error
-  4. Resubmit Correct input
-  5. Display extra section
-   
-Expected:
-
- Display extra section
-
-Result:
-
-  No errors and worked as expected.
-
-Test 7
-
- Enter extra
-
-Steps to Test:
-
-  1. Display extra.
-  2. Enter value
-  3. Click submit.
-  4. Display size section
-   
-Expected:
-
- Display size section
-
-Result:
-
-  No errors and worked as expected.
-
-Test 8
-
- Enter extra wrongly
-
-Steps to Test:
-
-  1. Display extra.
-  2. Enter value
-  3. Display Error
-  4. Resubmit Correct input
-  5. Display size section
-   
-Expected:
-
- Display extra section
-
-Result:
-
-  No errors and worked as expected.
-
-Test 9
-
- Enter size
-
-Steps to Test:
-
-  1. Display size.
-  2. Enter value
-  3. Click submit.
-  4. Display exit or add order question
-   
-Expected:
-
- Display exit or add order question
-
-Result:
-
-  No errors and worked as expected.
-
-Test 10
-
- Enter size wrongly
-
-Steps to Test:
-
-  1. Display size.
-  2. Enter value
-  3. Display Error
-  4. Resubmit Correct input
-  5. Display extra section
-   
-Expected:
-
-Display exit or add order question
-
-Result:
-
- Failed - Loop won't break out 
-
-Test 11
-
-Test Y on the - Do you want to add to the order?
-
-Steps to Test:
-
-  1. Enter Y
-  2. Click Submit
-  3. Display menu list again
-
-Expected:
-
-  Y to bring you to the Menu list
-
-Result:
-
-  No errors and worked as expected.
-
-Test 12
-
-Test N on the - Do you want to add to the order?
-
-Steps to Test:
-
-  1. Enter N
-  2. Click Submit
-  3. Display your order
-
-Expected:
-
- Display your order
-
-Result:
-
-  No errors and worked as expected.
- 
 ## Bugs
 No bugs to report
 
