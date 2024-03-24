@@ -1,17 +1,6 @@
-import gspread
-from google.oauth2.service_account import Credentials
 from tabulate import tabulate
 import random
-SCOPE = [
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive.file",
-    "https://www.googleapis.com/auth/drive"
-    ]
 
-CREDS = Credentials.from_service_account_file('creds.json')
-SCOPED_CREDS = CREDS.with_scopes(SCOPE)
-GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-SHEET = GSPREAD_CLIENT.open('cuppa_joe')
 BANNER="""
 
 
@@ -113,8 +102,9 @@ def add_extra():
         if extra in extra_items:
             break
         else:
-            print("ERROR: PLEASE ENTER OPTION AS SHOWN!")
             print()
+            print("ERROR: PLEASE ENTER OPTION AS SHOWN!")
+            
     total.append(extra_items[extra] * quantity)
 
 
@@ -154,10 +144,12 @@ def get_order_items():
 def main():
     while True:
         more = input("Do you want to add to the order? Y/N \n")
-        if more == "Y":
+        if more == "Y" or more == "y":
             get_order_items()
-        else:
+        elif more == "N" or more == "n":
             break
+        else:
+            print("ERROR: PLEASE ENTER VALID OPTION!")
 
     print("\nYou order:\n")
     for order in order_items:
@@ -166,6 +158,7 @@ def main():
     order_num()
 
     print(f"The total price is:\n €{sum(total)}\n")
+
 
 SystemExit()
 
