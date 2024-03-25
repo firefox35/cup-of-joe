@@ -53,7 +53,7 @@ print("We have a large selection of drinks available from our menu.\n")
 
 coffee_items = {"Latte": {"Small": 2.50, "Medium": 2.75, "Large": 3.00},
                 "Flat White": {"Small": 2.50, "Medium": 2.75, "Large": 3.00},
-                "Americano": {"Small": 2.50, "Medium": 2.75, "Large": 3.00},
+                "Americano":{"Small": 2.50, "Medium": 2.75, "Large": 3.00},
                 "Cappucino": {"Small": 2.50, "Medium": 2.75, "Large": 3.00},
                 "Mocha": {"Small": 2.50, "Medium": 2.75, "Large": 3.00}}
 extra_items = {"Soya Milk": .50, "Cream": .75,
@@ -74,10 +74,9 @@ def add_coffee():
         if product in coffee_items:
             break
         else:
-            print()
             print("ERROR: PLEASE ENTER OPTION AS SHOWN!\n")
-
-
+            
+            
 # Add Quantity to the Order
 def get_quantity():
     global quantity
@@ -144,9 +143,9 @@ def get_order_items():
 def main():
     while True:
         more = input("Do you want to add to the order? Y/N \n")
-        if more == "Y" or more == "y":
+        if more in ["Y","y","YES","Yes","yes"]:
             get_order_items()
-        elif more == "N" or more == "n":
+        elif more in ["N","n","NO","No","no"]:
             break
         else:
             print("ERROR: PLEASE ENTER VALID OPTION!")
