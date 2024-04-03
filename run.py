@@ -1,7 +1,10 @@
 from tabulate import tabulate
 import random
 
-BANNER="""
+
+BANNER = """
+
+
 
 
 ░█████╗░██╗░░░██╗██████╗░██████╗░░█████╗░  ░░░░░██╗░█████╗░███████╗
@@ -53,7 +56,7 @@ print("We have a large selection of drinks available from our menu.\n")
 
 coffee_items = {"Latte": {"Small": 2.50, "Medium": 2.75, "Large": 3.00},
                 "Flat White": {"Small": 2.50, "Medium": 2.75, "Large": 3.00},
-                "Americano":{"Small": 2.50, "Medium": 2.75, "Large": 3.00},
+                "Americano": {"Small": 2.50, "Medium": 2.75, "Large": 3.00},
                 "Cappucino": {"Small": 2.50, "Medium": 2.75, "Large": 3.00},
                 "Mocha": {"Small": 2.50, "Medium": 2.75, "Large": 3.00}}
 extra_items = {"Soya Milk": .50, "Cream": .75,
@@ -63,6 +66,7 @@ order_items = []
 
 
 # Add Coffee to the Order
+
 def add_coffee():
     global product
     while True:
@@ -71,17 +75,18 @@ def add_coffee():
         headers = ["Name"]
         print(tabulate(item, headers, tablefmt="rounded_outline"))
         product = input("\nWhat coffee would you like? \n")
-        if product in coffee_items:
+        if product.title() in coffee_items:
             break
         else:
             print("ERROR: PLEASE ENTER OPTION AS SHOWN!\n")
-            
-            
+
+
 # Add Quantity to the Order
+
 def get_quantity():
     global quantity
     while True:
-        quantity = input(f"\nHow many would {product} you like? \n")
+        quantity = input(f"\nHow many would {product} you like?\n")
         try:
             quantity = int(quantity)
             break
@@ -97,31 +102,32 @@ def add_extra():
     headers = ["Extra"]
     print(tabulate(extra, headers, tablefmt="rounded_outline"))
     while True:
-        extra = input(f"\nWould you like anything extra with your {product}? \n").capitalize()
-        if extra in extra_items:
+        extra = input(f"""\nWould you like anything extra with your {product}?
+                      \n""").capitalize()
+        if extra.title() in extra_items:
             break
         else:
-            print()
             print("ERROR: PLEASE ENTER OPTION AS SHOWN!")
-            
-    total.append(extra_items[extra] * quantity)
+            print()
+    total.append(extra_items[extra.title()] * quantity)
 
 
 # Add Size of Coffee to the Order
 def add_size():
     global size
-    amount = [["Small"], ["Meduim"], ["Large"]]
+    amount = [["Small"], ["Medium"], ["Large"]]
     headers = ["Size"]
     print(tabulate(amount, headers, tablefmt="rounded_outline"))
     while True:
-        size = input("\nWhat size would you like? \n").capitalize()
-        if size in coffee_items:
+        size = input(f"\nWhat size would you like? \n").capitalize()
+        try:
+            size.title() in coffee_items.values()
+            break
+        except KeyError:
             print("ERROR: PLEASE ENTER OPTION AS SHOWN!")
-            print()
-        else:
-             break             
-    print(f"\nYou have ordered:\n {quantity} - {size} {product} with {extra}.\n")
-    total.append(coffee_items[product][size] * quantity)
+    print(f"""\n You have ordered: \n {quantity} - {size}
+          {product} with {extra}.\n""")
+    total.append(coffee_items[product.title()][size.title()] * quantity)
 
 
 # Order Number Generated
@@ -136,16 +142,17 @@ def get_order_items():
     add_extra()
     add_size()
 
-    order_items.append(f"Quantity: {quantity}\nSize: {size}\nProduct: {product}\nExtra: {extra}\n")
+    order_items.append(f"""Quantity: {quantity}\nSize: {size}\n
+                       Product: {product}\nExtra: {extra}\n""")
 
 
 # Main Function that calls all functions
 def main():
     while True:
         more = input("Do you want to add to the order? Y/N \n")
-        if more in ["Y","y","YES","Yes","yes"]:
+        if more in ["Y", "y", "YES", "Yes", "yes"]:
             get_order_items()
-        elif more in ["N","n","NO","No","no"]:
+        elif more in ["N", "n", "NO", "No", "no"]:
             break
         else:
             print("ERROR: PLEASE ENTER VALID OPTION!")
@@ -163,3 +170,4 @@ SystemExit()
 
 
 main()
+

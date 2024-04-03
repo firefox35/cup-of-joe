@@ -30,7 +30,6 @@ The system for ordering is very straight forward and easy to use
 * The waitress displays the user with a price of the order.
 
 ## Future Features
-- Its linked to google sheet - Cuppa Joe but the plan is to expand and store information about stock, sales etc. - [Cuppa Joe Google Sheet](https://docs.google.com/spreadsheets/d/1LndCzbR5Ka51pPy-31jOA-pqE0OtMWGdWG6E3wUtcwM/edit#gid=1040659719)
 - Upgrade UI with background image
 - Add Payment Section
 
@@ -86,6 +85,7 @@ ASCII Image
 
 
 # Testing
+Fixed most errors using .title() apart from the size issue in which I have tried to fix without any success.
 
 ### Test 1
 |          Description            |         Steps          |Expected | Result  |
@@ -170,17 +170,14 @@ ASCII Image
 
 
 ### Test 10
-|          Description        |         Steps              |Expected | Result  |
-|-----------------------------|----------------------------|---------|---------|
-| Enter wrong size of coffee  | 1. Display size.           | Passed  | &check; |
-|                             | 2. Enter value             | Passed  | &check; |
-|                             | 3. Display Error           | Passed  | &check; |
-|                             | 4. Resubmit Correct input  | Passed  | &check; |
-|                             | 5. Display extra section   | Failed  | &check; |
-
-   
-Expected: Display exit or add order question
-Result:  Failed - Loop won't break out 
+|          Description        |         Steps              |Expected | Result   |
+|-----------------------------|----------------------------|---------|----------|
+| Enter wrong size of coffee  | 1. Display size.           | Passed  | &check;  |
+|                             | 2. Enter value             | Passed  | &check;  |
+|                             | 3. Display Error           | Passed  | &check;  |
+|                             | 4. Resubmit Correct input  | Passed  | &check;  |
+|                             | 5. Display extra section   | Failed  | &crossed;|
+ 
 
 ### Test 11
 |             Description          |         Steps              |Expected | Result  |
