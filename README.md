@@ -170,13 +170,13 @@ Fixed most errors using .title() apart from the size issue in which I have tried
 
 
 ### Test 10
-|          Description        |         Steps              |Expected | Result   |
-|-----------------------------|----------------------------|---------|----------|
-| Enter wrong size of coffee  | 1. Display size.           | Passed  | &check;  |
-|                             | 2. Enter value             | Passed  | &check;  |
-|                             | 3. Display Error           | Passed  | &check;  |
-|                             | 4. Resubmit Correct input  | Passed  | &check;  |
-|                             | 5. Display extra section   | Failed  | &crossed;|
+|          Description        |         Steps              |Expected | Result |
+|-----------------------------|----------------------------|---------|--------|
+| Enter wrong size of coffee  | 1. Display size.           | Passed  | &check;|
+|                             | 2. Enter value             | Passed  | &check;|
+|                             | 3. Display Error           | Passed  | &check;|
+|                             | 4. Resubmit Correct input  | Passed  | &check;|
+|                             | 5. Display extra section   | Failed  | &cross;|
  
 
 ### Test 11
